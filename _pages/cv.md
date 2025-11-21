@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -24,5 +24,5 @@ Work experience
 * Aug 2019 - Dec 2019: Teaching Assistant
   * The University of Sydney
 
-* Apr 2017 - July 2015: Research Assistant
+* Apr 2017 - July 2018: Research Assistant
   * RMIT University
