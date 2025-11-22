@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: ""
-permalink: /cv/
+title: "Principal Investigator"
+permalink: /pi/
 author_profile: true
 redirect_from:
   - /resume
