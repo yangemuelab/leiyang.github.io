@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Principal Investigator"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,53 +9,104 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="text-align: left; margin-top: 0px; margin-bottom: 20px;">
-  <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--primary btn--large">
-    <i class="fas fa-file-pdf"></i> Download Detailed CV
+<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 2px solid #f2f2f2; margin-bottom: 30px;">
+  <h1 style="margin: 0; font-size: 1.8em; color: #333;">Principal Investigator</h1>
+  <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--info" style="text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <i class="fas fa-file-download"></i> Download CV
   </a>
 </div>
 
-## 🎓 Education
-<table style="width:80%; border:none; border-collapse:collapse;font-size: 1rem;">
-  <tr style="border-bottom:none;">
-    <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
-    <td width="25%" style="border:none; text-align:right;">Sep 2023 - Dec 2025</td>
-  </tr>
-  <tr style="border-bottom:none;">
-    <td style="border:none;"><strong>The University of Sydney</strong><br>Ph.D. in Civil Engineering</td>
-    <td style="border:none; text-align:right;">July 2018 - July 2022</td>
-  </tr>
-  <tr style="border-bottom:none;">
-    <td style="border:none;"><strong>Northeastern University</strong><br>M.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;">Sep 2015 - Jan 2018</td>
-  </tr>
-  <tr style="border-bottom:none;">
-    <td style="border:none;"><strong>Northeastern University</strong><br>B.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;">Sep 2011 - June 2015</td>
-  </tr>
-</table>
+<h2 style="color: #2c3e50; margin-bottom: 20px;">
+  <i class="fas fa-graduation-cap" style="color: #3498db; margin-right: 10px;"></i>Education
+</h2>
 
-## 💼 Work Experience
-<table style="width:80%; border:none; border-collapse:collapse;font-size: 1rem;">
-  <tr style="border-bottom:none;">
-    <td width="75%" style="border:none;"><strong>Honor Device Co., Ltd.</strong><br>Senior R&D and Project Manager</td>
-    <td width="25%" style="border:none; text-align:right;">Mar 2022 - Aug 2023</td>
-  </tr>
-  <tr style="border-bottom:none;">
-    <td style="border:none;"><strong>The University of Sydney</strong><br>Teaching Assistant</td>
-    <td style="border:none; text-align:right;">Aug 2019 - Dec 2019</td>
-  </tr>
-  <tr style="border-bottom:none;">
-    <td style="border:none;"><strong>RMIT University</strong><br>Research Assistant</td>
-    <td style="border:none; text-align:right;">Apr 2017 - July 2018</td>
-  </tr>
-</table>
+<div style="border-left: 4px solid #3498db; padding-left: 20px; margin-left: 5px; margin-bottom: 40px;">
+  
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">Johns Hopkins University</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">2023 - 2025</span>
+    </div>
+    <div style="color: #555;">Postdoc in Mechanical Engineering</div>
+  </div>
 
-## 🔬 Research Interests
-<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
-  <span style="background-color: #f2f2f2; padding: 5px 12px; border-radius: 5px; border: 1px solid #ddd;">Mechanics of Materials</span>
-  <span style="background-color: #f2f2f2; padding: 5px 12px; border-radius: 5px; border: 1px solid #ddd;">Impact Dynamics</span>
-  <span style="background-color: #f2f2f2; padding: 5px 12px; border-radius: 5px; border: 1px solid #ddd;">Constitutive Modeling</span>
-  <span style="background-color: #f2f2f2; padding: 5px 12px; border-radius: 5px; border: 1px solid #ddd;">Planetary Defense</span>
-  <span style="background-color: #f2f2f2; padding: 5px 12px; border-radius: 5px; border: 1px solid #ddd;">AI-driven Composite Design</span>
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">The University of Sydney</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">2022</span>
+    </div>
+    <div style="color: #555;">Ph.D. in Civil Engineering</div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">Northeastern University</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">2018</span>
+    </div>
+    <div style="color: #555;">M.S. in Mining Engineering</div>
+  </div>
+
+  <div style="margin-bottom: 0px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">Northeastern University</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">2015</span>
+    </div>
+    <div style="color: #555;">B.S. in Mining Engineering</div>
+  </div>
+
+</div>
+
+<h2 style="color: #2c3e50; margin-bottom: 20px;">
+  <i class="fas fa-briefcase" style="color: #e67e22; margin-right: 10px;"></i>Work Experience
+</h2>
+
+<div style="border-left: 4px solid #e67e22; padding-left: 20px; margin-left: 5px; margin-bottom: 40px;">
+
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">Honor Device Co., Ltd.</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">Mar 2022 - Aug 2023</span>
+    </div>
+    <div style="color: #555;">Senior R&D and Project Manager</div>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">The University of Sydney</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">Aug 2019 - Dec 2019</span>
+    </div>
+    <div style="color: #555;">Teaching Assistant</div>
+  </div>
+
+  <div style="margin-bottom: 0px;">
+    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+      <strong style="font-size: 1.1em;">RMIT University</strong>
+      <span style="color: #7f8c8d; font-weight: 500;">Apr 2017 - July 2018</span>
+    </div>
+    <div style="color: #555;">Research Assistant</div>
+  </div>
+
+</div>
+
+<h2 style="color: #2c3e50; margin-bottom: 20px;">
+  <i class="fas fa-microscope" style="color: #27ae60; margin-right: 10px;"></i>Research Interests
+</h2>
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  {% capture tag_style %}
+    background-color: #f8f9fa; 
+    color: #333; 
+    padding: 8px 15px; 
+    border-radius: 20px; 
+    border: 1px solid #e0e0e0; 
+    font-size: 0.95em; 
+    box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+    font-weight: 500;
+  {% endcapture %}
+
+  <span style="{{ tag_style }}">Mechanics of Materials</span>
+  <span style="{{ tag_style }}">Impact Dynamics</span>
+  <span style="{{ tag_style }}">Constitutive Modeling</span>
+  <span style="{{ tag_style }}">Planetary Defense</span>
+  <span style="{{ tag_style }}">AI-driven Composite Design</span>
 </div>
