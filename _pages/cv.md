@@ -16,7 +16,7 @@ redirect_from:
 </div>
 
 ## 🎓 Education
-<table style="width:70%; border:none; border-collapse:collapse;font-size: 1rem;">
+<table style="width:80%; border:none; border-collapse:collapse;font-size: 1rem;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
     <td width="25%" style="border:none; text-align:right;">2023 - 2025</td>
@@ -36,7 +36,7 @@ redirect_from:
 </table>
 
 ## 💼 Work Experience
-<table style="width:70%; border:none; border-collapse:collapse;font-size: 1rem;">
+<table style="width:80%; border:none; border-collapse:collapse;font-size: 1rem;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Honor Device Co., Ltd.</strong><br>Senior R&D and Project Manager</td>
     <td width="25%" style="border:none; text-align:right;">Mar 2022 - Aug 2023</td>
