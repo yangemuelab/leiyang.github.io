@@ -99,7 +99,7 @@ redirect_from:
     padding: 8px 15px; 
     border-radius: 20px; 
     border: 1px solid #e0e0e0; 
-    font-size: 0.95em; 
+    font-size: 0.8em; 
     box-shadow: 0 2px 2px rgba(0,0,0,0.05);
     font-weight: 500;
   {% endcapture %}
