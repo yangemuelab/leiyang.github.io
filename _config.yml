@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "The Yang Laboratory"
+title                    : "Yang Research Group"
 title_separator          : "-"
 name                     : &name "Extreme Mechanics for Underground Engineering"
 description              : &description "The Yang Laboratory for Extreme Mechanics in Underground Engineering"   # Update this with a general description of your site, this is the default if not overridden by a page
