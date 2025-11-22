@@ -16,7 +16,7 @@ redirect_from:
 </div>
 
 ## 🎓 Education
-<table style="width:100%; border:none; border-collapse:collapse;">
+<table style="width:50%; border:none; border-collapse:collapse;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
     <td width="25%" style="border:none; text-align:right;">2023 - 2025</td>
@@ -36,7 +36,7 @@ redirect_from:
 </table>
 
 ## 💼 Work Experience
-<table style="width:100%; border:none; border-collapse:collapse;">
+<table style="width:50%; border:none; border-collapse:collapse;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Honor Device Co., Ltd.</strong><br>Senior R&D and Project Manager</td>
     <td width="25%" style="border:none; text-align:right;">Mar 2022 - Aug 2023</td>
@@ -52,10 +52,10 @@ redirect_from:
 </table>
 
 ## 🔬 Research Interests
-<div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Mechanics of Materials</span>
-  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Impact Dynamics</span>
-  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Constitutive Modeling</span>
-  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Planetary Defense</span>
-  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">AI-driven Composite Design</span>
-</div>
+<ul style="list-style-type: circle; padding-left: 20px; margin-top: 0;">
+  <li style="margin-bottom: 5px;">Mechanics of Materials</li>
+  <li style="margin-bottom: 5px;">Impact Dynamics</li>
+  <li style="margin-bottom: 5px;">Constitutive Modeling</li>
+  <li style="margin-bottom: 5px;">Planetary Defense</li>
+  <li style="margin-bottom: 5px;">AI-driven Composite Design</li>
+</ul>
