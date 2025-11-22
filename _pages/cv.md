@@ -15,28 +15,47 @@ redirect_from:
   </a>
 </div>
 
-Education
-======
-* Postdoc in Mechanical Engineering, Johns Hopkins University, 2023 - 2025
-* Ph.D in Civil Engineering, The University of Sydney, 2022
-* M.S. in Mining Eningineering, Northeastern University, 2018
-* B.S. in Mining Eningineering, Northeastern University, 2015
+## 🎓 Education
+<table style="width:100%; border:none; border-collapse:collapse;">
+  <tr style="border-bottom:none;">
+    <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
+    <td width="25%" style="border:none; text-align:right;">2023 - 2025</td>
+  </tr>
+  <tr style="border-bottom:none;">
+    <td style="border:none;"><strong>The University of Sydney</strong><br>Ph.D. in Civil Engineering</td>
+    <td style="border:none; text-align:right;">2022</td>
+  </tr>
+  <tr style="border-bottom:none;">
+    <td style="border:none;"><strong>Northeastern University</strong><br>M.S. in Mining Engineering</td>
+    <td style="border:none; text-align:right;">2018</td>
+  </tr>
+  <tr style="border-bottom:none;">
+    <td style="border:none;"><strong>Northeastern University</strong><br>B.S. in Mining Engineering</td>
+    <td style="border:none; text-align:right;">2015</td>
+  </tr>
+</table>
 
-Work experience
-======
-* Mar 2022 - Aug 2023: Senior R&D and Project Manager
-  * Honor Device Co., Ltd.
+## 💼 Work Experience
+<table style="width:100%; border:none; border-collapse:collapse;">
+  <tr style="border-bottom:none;">
+    <td width="75%" style="border:none;"><strong>Honor Device Co., Ltd.</strong><br>Senior R&D and Project Manager</td>
+    <td width="25%" style="border:none; text-align:right;">Mar 2022 - Aug 2023</td>
+  </tr>
+  <tr style="border-bottom:none;">
+    <td style="border:none;"><strong>The University of Sydney</strong><br>Teaching Assistant</td>
+    <td style="border:none; text-align:right;">Aug 2019 - Dec 2019</td>
+  </tr>
+  <tr style="border-bottom:none;">
+    <td style="border:none;"><strong>RMIT University</strong><br>Research Assistant</td>
+    <td style="border:none; text-align:right;">Apr 2017 - July 2018</td>
+  </tr>
+</table>
 
-* Aug 2019 - Dec 2019: Teaching Assistant
-  * The University of Sydney
-
-* Apr 2017 - July 2018: Research Assistant
-  * RMIT University
-
-Research Interests
-======
-* Mechanics of Materials
-* Impact Dynamics
-* Constitutive Modeling
-* Planetary Defense
-* AI-driven Composite Design
+## 🔬 Research Interests
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Mechanics of Materials</span>
+  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Impact Dynamics</span>
+  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Constitutive Modeling</span>
+  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">Planetary Defense</span>
+  <span style="background-color: #f2f2f2; padding: 5px 10px; border-radius: 5px; border: 1px solid #ddd;">AI-driven Composite Design</span>
+</div>
