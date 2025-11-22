@@ -26,3 +26,11 @@ Work experience
 
 * Apr 2017 - July 2018: Research Assistant
   * RMIT University
+
+Research Interests
+======
+* Mechanics of Materials
+* Impact Dynamics
+* Constitutive Modeling
+* Planetary Defense
+* AI-driven Composite Design
