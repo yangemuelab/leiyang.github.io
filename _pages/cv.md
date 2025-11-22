@@ -19,19 +19,19 @@ redirect_from:
 <table style="width:80%; border:none; border-collapse:collapse;font-size: 1rem;">
   <tr style="border-bottom:none;">
     <td width="75%" style="border:none;"><strong>Johns Hopkins University</strong><br>Postdoc in Mechanical Engineering</td>
-    <td width="25%" style="border:none; text-align:right;">2023 - 2025</td>
+    <td width="25%" style="border:none; text-align:right;">Sep 2023 - Dec 2025</td>
   </tr>
   <tr style="border-bottom:none;">
     <td style="border:none;"><strong>The University of Sydney</strong><br>Ph.D. in Civil Engineering</td>
-    <td style="border:none; text-align:right;">2022</td>
+    <td style="border:none; text-align:right;">July 2018 - July 2022</td>
   </tr>
   <tr style="border-bottom:none;">
     <td style="border:none;"><strong>Northeastern University</strong><br>M.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;">2018</td>
+    <td style="border:none; text-align:right;">Sep 2015 - Jan 2018</td>
   </tr>
   <tr style="border-bottom:none;">
     <td style="border:none;"><strong>Northeastern University</strong><br>B.S. in Mining Engineering</td>
-    <td style="border:none; text-align:right;">2015</td>
+    <td style="border:none; text-align:right;">Sep 2011 - June 2015</td>
   </tr>
 </table>
 
