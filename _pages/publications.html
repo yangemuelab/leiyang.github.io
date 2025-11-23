@@ -11,26 +11,57 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+## Selected Publications
+
+<div style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 25px;">
+  
+  <div style="font-size: 1.2em; font-weight: bold; color: #2c3e50; line-height: 1.4;">
+    A mechanism‐based constitutive model for competent rocks subjected to impact loading
+  </div>
+
+  <div style="margin-top: 5px; color: #333; font-size: 1em;">
+    Author One, <b>Lei Yang</b>, Author Three
+  </div>
+
+  <div style="font-style: italic; color: #666; margin-top: 2px; font-size: 0.95em;">
+    Journal of Geophysical Research: Solid Earth, 2025
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 12px; align-items: flex-start;">
+    
+    <details style="cursor: pointer;">
+      <summary style="color: #3498db; font-size: 0.9em; font-weight: bold; outline: none; list-style: none;">
+        <i class="fas fa-align-left" style="margin-right: 5px;"></i> Abstract
+      </summary>
+      <div style="font-size: 0.95em; line-height: 1.6; background-color: #f8f9fa; border-left: 4px solid #3498db; padding: 15px; margin-top: 10px; border-radius: 4px; color: #555;">
+        <strong>Abstract:</strong> Paste your full abstract text here. High-strain-rate behavior of rocks is critical for underground engineering...
+      </div>
+    </details>
+
+    <details style="cursor: pointer;">
+      <summary style="color: #3498db; font-size: 0.9em; font-weight: bold; outline: none; list-style: none;">
+        <i class="fas fa-quote-right" style="margin-right: 5px;"></i> BibTeX
+      </summary>
+      <div style="margin-top: 10px;">
+        <pre style="font-size: 0.8em; background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto; border: 1px solid #e0e0e0;">
+@article{yang2025mechanism,
+  title={A mechanism-based...},
+  author={Yang, Lei and others},
+  journal={JGR: Solid Earth},
+  year={2025}
+}</pre>
+      </div>
+    </details>
+
+    <a href="https://doi.org/YOUR-PAPER-DOI" target="_blank" style="text-decoration: none; color: #3498db; font-size: 0.9em; font-weight: bold;">
+      <i class="fas fa-link" style="margin-right: 5px;"></i> DOI
+    </a>
+
+    <a href="https://scholar.google.com/YOUR-PROFILE-LINK" target="_blank" style="text-decoration: none; color: #3498db; font-size: 0.9em; font-weight: bold;">
+      <i class="ai ai-google-scholar" style="margin-right: 5px;"></i> Scholar
+    </a>
+    </div>
+</div>
 
 
 
