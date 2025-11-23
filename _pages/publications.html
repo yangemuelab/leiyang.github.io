@@ -31,13 +31,30 @@ author_profile: true
 
   <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; align-items: center;">
     
-    <button class="toggle-btn" data-target="abs_1" type="button" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
-      <i class="fas fa-align-left"></i> Abstract
-    </button>
+    <details name="pub1" style="display: inline-block; width: auto;">
+      <summary style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px; list-style: none; outline: none;">
+        <i class="fas fa-align-left"></i> Abstract
+      </summary>
+      
+      <div style="font-size: 0.95em; line-height: 1.6; background-color: #f8f9fa; border-left: 4px solid #2980b9; padding: 15px; margin-top: 15px; border-radius: 4px; color: #555; width: 100%; min-width: 300px;">
+        <strong>Abstract:</strong> 
+        The dynamic behavior of rocks under dynamic loading conditions is important in a wide range of processes...
+      </div>
+    </details>
 
-    <button class="toggle-btn" data-target="bib_1" type="button" style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
-      <i class="fas fa-quote-right"></i> BibTeX
-    </button>
+    <details name="pub1" style="display: inline-block; width: auto;">
+      <summary style="cursor: pointer; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px; list-style: none; outline: none;">
+        <i class="fas fa-quote-right"></i> BibTeX
+      </summary>
+      
+      <div style="margin-top: 15px;">
+        <pre style="font-size: 0.8em; background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto; border: 1px solid #e0e0e0;">
+@article{yang2025JGR,
+  title = {A Mechanism-Based Constitutive Model...},
+  year={2025}
+}</pre>
+      </div>
+    </details>
 
     <a href="https://doi.org/10.1029/2024JB031101" target="_blank" style="text-decoration: none; border: 1px solid #d0e3f0; background-color: #f0f7fc; color: #2980b9; padding: 6px 14px; border-radius: 25px; font-size: 0.85em; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 6px;">
       <i class="fas fa-link"></i> Journal URL
@@ -48,53 +65,4 @@ author_profile: true
     </a>
   </div>
 
-  <div id="abs_1" class="hidden-content" style="display: none; font-size: 0.95em; line-height: 1.6; background-color: #f8f9fa; border-left: 4px solid #2980b9; padding: 15px; margin-top: 15px; border-radius: 4px; color: #555;">
-    <strong>Abstract:</strong> The dynamic behavior of rocks under dynamic loading conditions is important in a wide range of processes...
-  </div>
-
-  <div id="bib_1" class="hidden-content" style="display: none; margin-top: 15px;">
-    <pre style="font-size: 0.8em; background: #f4f4f4; padding: 15px; border-radius: 4px; overflow-x: auto; border: 1px solid #e0e0e0;">
-@article{yang2025JGR,
-  title = {A Mechanism-Based Constitutive Model...},
-  year={2025}
-}</pre>
-  </div>
-
 </div>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("Publication Script Loaded via Event Listener");
-
-  // 1. Find all buttons with the class 'toggle-btn'
-  const buttons = document.querySelectorAll('.toggle-btn');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      // 2. Get the target ID from the data attribute
-      const targetId = this.getAttribute('data-target');
-      const targetElement = document.getElementById(targetId);
-
-      if (!targetElement) {
-        console.error("Target element not found: " + targetId);
-        return;
-      }
-
-      // 3. Logic to close other open boxes (Abstract vs BibTeX)
-      // Check if we are opening or closing
-      const isClosed = targetElement.style.display === "none" || targetElement.style.display === "";
-
-      if (isClosed) {
-        // Close ALL other hidden content first
-        document.querySelectorAll('.hidden-content').forEach(el => {
-           el.style.display = "none";
-        });
-        // Open the clicked one
-        targetElement.style.display = "block";
-      } else {
-        // Just close the clicked one
-        targetElement.style.display = "none";
-      }
-    });
-  });
-});
-</script>
