@@ -12,7 +12,7 @@ author_profile: false
   <div class="people-grid pi-grid">
     <article class="person-card pi-card">
       <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Lei Yang" loading="lazy">
-      <h3>Lei Yang, Ph.D.</h3>
+      <h3><a href="/cv/">Lei Yang, Ph.D.</a></h3>
     </article>
   </div>
 </section>
@@ -34,7 +34,7 @@ author_profile: false
     <article class="person-card placeholder">
       <h3>Open Position</h3>
       <p class="person-role">Postdoctoral Fellow</p>
-      <p>Focus areas: dynamic fracture, high-fidelity simulations, AI-assisted model discovery.</p>
+      <p>Focus areas: dynamic fracture, high-fidelity simulations, AI for materials design.</p>
     </article>
   </div>
 </section>
@@ -43,32 +43,23 @@ author_profile: false
   <h2>Graduate Students</h2>
   <div class="people-grid">
     <article class="person-card placeholder">
-      <h3>Your Name</h3>
-      <p class="person-role">Ph.D. Student, Civil Engineering</p>
-      <p class="person-edu">B.S. / M.S. information goes here.</p>
-      <p class="person-focus">Research interests summary goes here.</p>
+      <h3>Open position</h3>
+      <p class="person-role">Ph.D. Student</p>
+      <p class="person-edu">Background in Engineering</p>
+      <p class="person-focus">Research interests in AI-driven materials design</p>
     </article>
     <article class="person-card placeholder">
-      <h3>Your Name</h3>
-      <p class="person-role">M.S. Student, Mechanics</p>
-      <p class="person-edu">Background and previous institutions.</p>
-      <p class="person-focus">Project description or interests.</p>
+      <h3>Open Position</h3>
+      <p class="person-role">M.S. Student</p>
+      <p class="person-edu">Background in Engineering</p>
+      <p class="person-focus">Research interests in Geomechanics</p>
     </article>
   </div>
 </section>
 
 <section class="people-section" id="alumni">
   <h2>Alumni</h2>
-  <div class="people-grid alumni-grid">
-    <article class="person-card">
-      <h3>First Last</h3>
-      <p class="person-role">Ph.D. 2024 · Now at XYZ Company</p>
-    </article>
-    <article class="person-card">
-      <h3>First Last</h3>
-      <p class="person-role">Postdoctoral Fellow 2022–2024 · Now at ABC University</p>
-    </article>
-  </div>
+  <p class="coming-soon">We will showcase alumni stories here as the group grows.</p>
 </section>
 
 <style>
@@ -113,6 +104,10 @@ author_profile: false
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.coming-soon {
+  font-style: italic;
+  color: #6b7280;
+}
 .pi-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-items: center;
@@ -140,6 +135,12 @@ author_profile: false
   font-size: 1.15rem;
   color: #16213e;
   margin-bottom: 0;
+}
+
+.pi-card h3 a,
+.pi-card h3 a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 .person-card {
