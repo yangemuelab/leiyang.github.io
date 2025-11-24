@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Meet the Group"
+title: "Meet THE GROUP"
 permalink: /people/
 author_profile: true
 ---
@@ -72,6 +72,11 @@ author_profile: true
 </section>
 
 <style>
+.page__title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
 .people-hero {
   margin-bottom: 1.5rem;
   font-size: 1rem;
@@ -84,6 +89,10 @@ author_profile: true
 
 .people-section {
   margin-top: 2.5rem;
+}
+
+.people-section:first-of-type {
+  margin-top: 1.25rem;
 }
 
 .people-section h2 {
@@ -119,12 +128,12 @@ author_profile: true
 }
 
 .pi-card img {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 12px;
   margin-bottom: 0.75rem;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.16);
 }
 
 .pi-card h3 {
