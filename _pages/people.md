@@ -9,20 +9,10 @@ author_profile: true
 
 <section class="people-section" id="pi">
   <h2>Principal Investigator</h2>
-  <div class="people-grid">
-    <article class="person-card">
-      <div class="person-info">
-        <h3>Lei Yang, Ph.D.</h3>
-        <p class="person-role">Professor of Civil Engineering, Shenzhen University</p>
-        <p class="person-edu">
-          Ph.D. Structural Engineering | The University of Sydney<br>
-          M.S. Civil Engineering | The University of Sydney<br>
-          B.S. Civil Engineering | Huazhong University of Science and Technology
-        </p>
-        <p class="person-focus">
-          Research interests: extreme mechanics for underground engineering, dynamic fracture, multi-scale modeling, and AI-guided materials design.
-        </p>
-      </div>
+  <div class="people-grid pi-grid">
+    <article class="person-card pi-card">
+      <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Lei Yang" loading="lazy">
+      <h3>Lei Yang, Ph.D.</h3>
     </article>
   </div>
 </section>
@@ -112,6 +102,35 @@ author_profile: true
 
 .alumni-grid {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.pi-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+}
+
+.pi-card {
+  text-align: center;
+  max-width: 260px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.pi-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+}
+
+.pi-card h3 {
+  font-size: 1.15rem;
+  color: #16213e;
+  margin-bottom: 0;
 }
 
 .person-card {
