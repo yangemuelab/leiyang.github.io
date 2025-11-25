@@ -144,30 +144,9 @@
 </style>
 
 <script>
-  $(document).ready(function() {
-    $(document).on('click touchstart', function(event) {
-      var $nav = $('#site-nav');
-      var $btn = $nav.find('button'); 
-      var $links = $nav.find('.hidden-links');
-
-      var isMenuOpen = $btn.hasClass('close');
-      if (!isMenuOpen) {
-        return;
-      }
-
-      var $target = $(event.target);
-      var clickedButton = $target.closest('#site-nav button').length > 0;
-      var clickedHiddenLinks = $target.closest('#site-nav .hidden-links').length > 0;
-
-      if (!clickedButton && !clickedHiddenLinks) {
-        $btn.removeClass('close');
-        $links.addClass('hidden');
-      }
-    });
-
-    $(document).on('click', '#site-nav .hidden-links a', function() {
-      $('#site-nav button').removeClass('close');
-      $('#site-nav .hidden-links').addClass('hidden');
-    });
-  });
-  </script>
+// Close menu when clicking a dropdown link
+$(document).on('click', '#site-nav .hidden-links a', function() {
+  $('#site-nav button').removeClass('close');
+  $('#site-nav .hidden-links').addClass('hidden');
+});
+</script>
