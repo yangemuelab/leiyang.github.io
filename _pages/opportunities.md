@@ -16,7 +16,7 @@ author_profile: false
 </p>
 
 <div style="text-align: center; margin-bottom: 0px; margin-top: 0px;">
-  <img src="/images/join_us.png" alt="Join us" style="width: 70%; max-width: 700px; height: auto; margin-bottom: 0px;">
+  <img src="/images/join_us_nolabname.png" alt="Join us" style="max-width: 100%; height: auto; margin-bottom: 0px;">
 </div>
 
 <p>
