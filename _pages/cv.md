@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="padding-bottom: 20px; border-bottom: 2px solid #f2f2f2; margin-bottom: 30px;">
+<div style="padding-bottom: 20px; border-bottom: 2px solid #f2f2f2; margin-bottom: 0px;">
   <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--info" style="text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <i class="fas fa-file-download"></i> Download CV
   </a>
