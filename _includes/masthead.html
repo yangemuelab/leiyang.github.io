@@ -24,9 +24,29 @@
 
 <style>
 .masthead--accent {
-  background: #fafafa;
+  background: #fafafa !important;
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.masthead.masthead--accent {
+  background: #fafafa !important;
+}
+
+.masthead__inner-wrap {
+  background: transparent !important;
+}
+
+.masthead__menu {
+  background: transparent !important;
+}
+
+.greedy-nav {
+  background: transparent !important;
+}
+
+.greedy-nav button {
+  background-color: transparent !important;
 }
 
 .masthead__menu--boxed .visible-links {
@@ -34,6 +54,11 @@
   align-items: center;
   gap: 1.5rem;
   width: 100%;
+  background: transparent !important;
+}
+
+.visible-links {
+  background: transparent !important;
 }
 
 .masthead__menu-item {
@@ -64,3 +89,30 @@
   color: #1d4ed8;
 }
 </style>
+
+<script>
+// Close mobile menu when clicking outside or on a menu item
+$(document).ready(function() {
+  var $btn = $('#site-nav button');
+  var $hlinks = $('#site-nav .hidden-links');
+  var $nav = $('#site-nav');
+  
+  // Close menu when clicking outside the navigation
+  $(document).on('click', function(event) {
+    // Check if click is outside the navigation
+    if (!$nav.is(event.target) && !$nav.has(event.target).length) {
+      // If menu is open (not hidden), close it
+      if (!$hlinks.hasClass('hidden')) {
+        $hlinks.addClass('hidden');
+        $btn.removeClass('close');
+      }
+    }
+  });
+  
+  // Close menu when clicking on a menu link (for better UX)
+  $hlinks.on('click', 'a', function() {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close');
+  });
+});
+</script>
