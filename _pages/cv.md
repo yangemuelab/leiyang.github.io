@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: ""
+title: "Principal Investigator"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,8 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 2px solid #f2f2f2; margin-bottom: 30px;">
-  <h1 style="margin: 0; font-size: 1.8em; color: #333;">Lei Yang</h1>
+<div style="padding-bottom: 20px; border-bottom: 2px solid #f2f2f2; margin-bottom: 30px;">
   <a href="/files/CV_Lei Yang.pdf" target="_blank" class="btn btn--info" style="text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <i class="fas fa-file-download"></i> Download CV
   </a>
