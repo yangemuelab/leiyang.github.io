@@ -50,36 +50,30 @@
 }
 
 /* Make hamburger icon lines visible - match lab brand color */
-.greedy-nav button .navicon {
-  background-color: #0f172a !important;
-}
-
+.greedy-nav button .navicon,
 .greedy-nav button .navicon::before,
 .greedy-nav button .navicon::after {
   background-color: #0f172a !important;
 }
 
-/* Ensure X (close state) works correctly - hide middle line and transform */
+/* Keep hamburger icon as three lines even when menu is open */
 .greedy-nav button.close .navicon {
-  background: transparent !important; /* Hide middle line when closed */
+  background-color: #0f172a !important;
 }
 
 .greedy-nav button.close .navicon::before,
 .greedy-nav button.close .navicon::after {
   background-color: #0f172a !important;
-  top: 0 !important; /* Overlay the lines */
-  -webkit-transform-origin: 50% 50% !important;
-  transform-origin: 50% 50% !important;
+  -webkit-transform: none !important;
+  transform: none !important;
 }
 
 .greedy-nav button.close .navicon::before {
-  -webkit-transform: rotate3d(0, 0, 1, 45deg) !important;
-  transform: rotate3d(0, 0, 1, 45deg) !important;
+  top: -8px !important; /* 2 * 4px navicon height */
 }
 
 .greedy-nav button.close .navicon::after {
-  -webkit-transform: rotate3d(0, 0, 1, -45deg) !important;
-  transform: rotate3d(0, 0, 1, -45deg) !important;
+  bottom: -8px !important;
 }
 
 .masthead__menu--boxed .visible-links {
