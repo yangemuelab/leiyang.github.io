@@ -68,16 +68,6 @@ author_profile: false
   margin-bottom: 0.5em; /* Match default page title spacing */
 }
 
-.people-hero {
-  margin-bottom: 0.0rem;
-  font-size: 1rem;
-  color: #444;
-}
-
-.people-hero a {
-  color: #1f6feb;
-}
-
 .people-section {
   margin-top: 2.5rem;
 }
