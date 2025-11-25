@@ -65,7 +65,7 @@ author_profile: false
 <style>
 .page__title {
   text-align: left;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5em; /* Match default page title spacing */
 }
 
 .people-hero {
@@ -83,7 +83,7 @@ author_profile: false
 }
 
 .people-section:first-of-type {
-  margin-top: 1.25rem;
+  margin-top: 0; /* No extra spacing - matches default page title to paragraph spacing */
 }
 
 .people-section h2 {
