@@ -59,10 +59,27 @@
   background-color: #0f172a !important;
 }
 
-/* Ensure X (close state) also uses dark color */
+/* Ensure X (close state) works correctly - hide middle line and transform */
+.greedy-nav button.close .navicon {
+  background: transparent !important; /* Hide middle line when closed */
+}
+
 .greedy-nav button.close .navicon::before,
 .greedy-nav button.close .navicon::after {
   background-color: #0f172a !important;
+  top: 0 !important; /* Overlay the lines */
+  -webkit-transform-origin: 50% 50% !important;
+  transform-origin: 50% 50% !important;
+}
+
+.greedy-nav button.close .navicon::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg) !important;
+  transform: rotate3d(0, 0, 1, 45deg) !important;
+}
+
+.greedy-nav button.close .navicon::after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) !important;
+  transform: rotate3d(0, 0, 1, -45deg) !important;
 }
 
 .masthead__menu--boxed .visible-links {
@@ -128,34 +145,38 @@
 $(document).ready(function() {
   var $btn = $('#site-nav button');
   var $hlinks = $('#site-nav .hidden-links');
+  var $nav = $('#site-nav');
   
   // Wait for greedy-nav to initialize, then add click handler
   setTimeout(function() {
     // Close menu when clicking anywhere on the document
     $(document).on('click', function(event) {
-      // Check if menu is open
-      var isMenuOpen = !$hlinks.hasClass('hidden');
+      // Check if menu is open (button has 'close' class or hidden-links is visible)
+      var isMenuOpen = $btn.hasClass('close') || !$hlinks.hasClass('hidden');
       
       if (isMenuOpen) {
-        // Check if click is on the button (let greedy-nav handle the toggle)
+        // Check if click is on the button itself (let greedy-nav handle the toggle)
         var isButtonClick = $(event.target).closest('#site-nav button').length > 0;
         
-        // Check if click is inside the hidden links menu
-        var isInsideMenu = $(event.target).closest('.hidden-links').length > 0;
+        // Check if click is inside the entire navigation area (including hidden links)
+        var isInsideNav = $(event.target).closest('#site-nav').length > 0;
         
-        // Only close if clicking outside both the button and the menu
-        if (!isButtonClick && !isInsideMenu) {
+        // Only close if clicking completely outside the navigation
+        if (!isButtonClick && !isInsideNav) {
           $hlinks.addClass('hidden');
           $btn.removeClass('close');
+          event.stopPropagation();
         }
       }
     });
     
     // Close menu when clicking on a menu link
     $hlinks.on('click', 'a', function() {
-      $hlinks.addClass('hidden');
-      $btn.removeClass('close');
+      setTimeout(function() {
+        $hlinks.addClass('hidden');
+        $btn.removeClass('close');
+      }, 100);
     });
-  }, 200);
+  }, 300);
 });
 </script>
