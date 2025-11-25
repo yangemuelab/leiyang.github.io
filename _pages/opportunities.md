@@ -18,3 +18,7 @@ author_profile: false
 <p>
   Academia is not the only goal in our group, we are also very welcome students who want to pursue a career in industry. If you are interested in joining us, please feel free to reach out together with your CV and brief research statement.  
 </p>
+
+<div style="text-align: center; margin-bottom: 0px; margin-top: 0px;">
+  <img src="/images/join_us.png" alt="Join us" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+</div>
