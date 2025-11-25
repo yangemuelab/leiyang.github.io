@@ -23,7 +23,7 @@ author_profile: false
     <article class="person-card placeholder">
       <h3>We are recruiting</h3>
       <p class="person-role">Research Scientist</p>
-      <p>Applicants with expertise in high-rate material characterization and computational mechanics are encouraged to contact us.</p>
+      <p>with expertise in high-rate material characterization and computational mechanics</p>
     </article>
   </div>
 </section>
@@ -34,7 +34,7 @@ author_profile: false
     <article class="person-card placeholder">
       <h3>Open Position</h3>
       <p class="person-role">Postdoctoral Fellow</p>
-      <p>Focus areas: dynamic fracture, high-fidelity simulations, AI for materials design.</p>
+      <p>in dynamic fracture, high-fidelity simulations, AI for materials design.</p>
     </article>
   </div>
 </section>
@@ -46,7 +46,7 @@ author_profile: false
       <h3>Open position</h3>
       <p class="person-role">Ph.D. Student</p>
       <p class="person-edu">Background in Engineering</p>
-      <p class="person-focus">Research interests in AI-driven materials design</p>
+      <p class="person-focus">Research interests in AI-driven composite design</p>
     </article>
     <article class="person-card placeholder">
       <h3>Open Position</h3>
