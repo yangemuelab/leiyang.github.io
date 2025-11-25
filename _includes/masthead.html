@@ -147,25 +147,29 @@ $(document).ready(function() {
   var $hlinks = $('#site-nav .hidden-links');
   var $nav = $('#site-nav');
   
-  // Wait for greedy-nav to initialize, then add click handler
+  // Wait for greedy-nav to initialize
   setTimeout(function() {
     // Close menu when clicking anywhere on the document
     $(document).on('click', function(event) {
-      // Check if menu is open (button has 'close' class or hidden-links is visible)
-      var isMenuOpen = $btn.hasClass('close') || !$hlinks.hasClass('hidden');
+      // Check if menu is open
+      var isMenuOpen = $btn.hasClass('close');
       
       if (isMenuOpen) {
-        // Check if click is on the button itself (let greedy-nav handle the toggle)
-        var isButtonClick = $(event.target).closest('#site-nav button').length > 0;
+        var $target = $(event.target);
         
-        // Check if click is inside the entire navigation area (including hidden links)
-        var isInsideNav = $(event.target).closest('#site-nav').length > 0;
+        // Check if click is on the button (let greedy-nav handle toggle)
+        var isButton = $target.closest('#site-nav button').length > 0;
         
-        // Only close if clicking completely outside the navigation
-        if (!isButtonClick && !isInsideNav) {
+        // Check if click is inside hidden links dropdown
+        var isInDropdown = $target.closest('.hidden-links').length > 0;
+        
+        // Check if click is inside the button's span (navicon)
+        var isInButtonIcon = $target.closest('button span').length > 0;
+        
+        // Close if clicking outside button and dropdown
+        if (!isButton && !isInDropdown && !isInButtonIcon) {
           $hlinks.addClass('hidden');
           $btn.removeClass('close');
-          event.stopPropagation();
         }
       }
     });
@@ -177,6 +181,6 @@ $(document).ready(function() {
         $btn.removeClass('close');
       }, 100);
     });
-  }, 300);
+  }, 500);
 });
 </script>
