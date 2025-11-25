@@ -49,6 +49,16 @@
   background-color: transparent !important;
 }
 
+/* Make hamburger icon lines visible - match lab brand color */
+.greedy-nav button .navicon {
+  background-color: #0f172a !important;
+}
+
+.greedy-nav button .navicon::before,
+.greedy-nav button .navicon::after {
+  background-color: #0f172a !important;
+}
+
 .masthead__menu--boxed .visible-links {
   display: flex;
   align-items: center;
@@ -85,8 +95,15 @@
   font-size: 1.2rem;
 }
 
+/* Navigation links hover - match lab brand hover behavior */
 .masthead__menu--boxed a:hover {
-  color: #1d4ed8;
+  color: #0f172a; /* Match lab brand name color */
+}
+
+/* Hidden menu links hover - match lab brand hover */
+.greedy-nav .hidden-links a:hover {
+  color: #0f172a !important; /* Match lab brand name color */
+  background: transparent;
 }
 </style>
 
@@ -95,24 +112,34 @@
 $(document).ready(function() {
   var $btn = $('#site-nav button');
   var $hlinks = $('#site-nav .hidden-links');
-  var $nav = $('#site-nav');
   
-  // Close menu when clicking outside the navigation
-  $(document).on('click', function(event) {
-    // Check if click is outside the navigation
-    if (!$nav.is(event.target) && !$nav.has(event.target).length) {
-      // If menu is open (not hidden), close it
-      if (!$hlinks.hasClass('hidden')) {
-        $hlinks.addClass('hidden');
-        $btn.removeClass('close');
+  // Wait for greedy-nav to initialize, then add click handler
+  setTimeout(function() {
+    // Close menu when clicking anywhere on the document
+    $(document).on('click', function(event) {
+      // Check if menu is open
+      var isMenuOpen = !$hlinks.hasClass('hidden');
+      
+      if (isMenuOpen) {
+        // Check if click is on the button (let greedy-nav handle the toggle)
+        var isButtonClick = $(event.target).closest('#site-nav button').length > 0;
+        
+        // Check if click is inside the hidden links menu
+        var isInsideMenu = $(event.target).closest('.hidden-links').length > 0;
+        
+        // Only close if clicking outside both the button and the menu
+        if (!isButtonClick && !isInsideMenu) {
+          $hlinks.addClass('hidden');
+          $btn.removeClass('close');
+        }
       }
-    }
-  });
-  
-  // Close menu when clicking on a menu link (for better UX)
-  $hlinks.on('click', 'a', function() {
-    $hlinks.addClass('hidden');
-    $btn.removeClass('close');
-  });
+    });
+    
+    // Close menu when clicking on a menu link
+    $hlinks.on('click', 'a', function() {
+      $hlinks.addClass('hidden');
+      $btn.removeClass('close');
+    });
+  }, 200);
 });
 </script>
