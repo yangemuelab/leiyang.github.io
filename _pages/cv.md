@@ -22,11 +22,11 @@ redirect_from:
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
-  background-color: #540863 !important;
+  background-color: #2B2E4A !important;
 }
 
 .cv-download-btn:hover {
-  background-color: #6a0a7a !important;
+  background-color: #3a3f5f !important;
 }
 
 .cv-section-title {
@@ -55,21 +55,21 @@ redirect_from:
 }
 
 .cv-section-icon--education {
-  color: #92487A;
-  background-color: #f5eef3;
-  border: 2px solid #92487A;
+  color: #E84545;
+  background-color: #fde8e8;
+  border: 2px solid #E84545;
 }
 
 .cv-section-icon--work {
-  color: #E49BA6;
-  background-color: #fdf2f3;
-  border: 2px solid #E49BA6;
+  color: #903749;
+  background-color: #f5e8ea;
+  border: 2px solid #903749;
 }
 
 .cv-section-icon--research {
-  color: #E49BA6;
-  background-color: #fff8f8;
-  border: 2px solid #FFD3D5;
+  color: #53354A;
+  background-color: #f5f3f4;
+  border: 2px solid #53354A;
 }
 
 .cv-section-content {
@@ -79,11 +79,11 @@ redirect_from:
 }
 
 .cv-section-content--education {
-  border-left: 4px solid #92487A;
+  border-left: 4px solid #E84545;
 }
 
 .cv-section-content--work {
-  border-left: 4px solid #E49BA6;
+  border-left: 4px solid #903749;
 }
 
 .cv-item {
@@ -121,17 +121,18 @@ redirect_from:
 
 .cv-interests-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.75rem;
 }
 
 .cv-interest-tag {
-  background-color: #f8f9fa;
-  color: #333;
+  background-color: #f5f3f4;
+  color: #53354A;
   padding: 0.625rem 1.25rem;
   border-radius: 30px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d4d0d2;
   font-size: 1em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   font-weight: 500;
