@@ -218,9 +218,8 @@ redirect_from:
 </h2>
 
 <div class="cv-interests-container">
-  <span class="cv-interest-tag">Mechanics of Materials</span>
+  <span class="cv-interest-tag">Geomechanics</span>
   <span class="cv-interest-tag">Impact Dynamics</span>
-  <span class="cv-interest-tag">Constitutive Modeling</span>
   <span class="cv-interest-tag">Planetary Defense</span>
   <span class="cv-interest-tag">AI-driven Composite Design</span>
 </div>
