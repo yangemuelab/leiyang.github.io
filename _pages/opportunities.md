@@ -13,7 +13,7 @@ author_profile: false
   margin-bottom: 2rem;
   padding: 1.25rem;
   background-color: #f8f9fa;
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #1F3A5F;
   border-radius: 4px;
   color: #4b5563;
   font-size: 1.0625rem;
@@ -49,8 +49,8 @@ author_profile: false
 }
 
 .opportunities-highlight {
-  background-color: #e8f4f8;
-  border-left: 4px solid #3498db;
+  background-color: #eef2fb;
+  border-left: 4px solid #1F3A5F;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 4px;
@@ -133,7 +133,7 @@ author_profile: false
   content: "▸";
   position: absolute;
   left: 0;
-  color: #3498db;
+  color: #1F3A5F;
   font-weight: bold;
   font-size: 1.125rem;
 }
@@ -146,13 +146,13 @@ author_profile: false
 }
 
 .opportunities-tag {
-  background-color: #e3f2fd;
-  color: #1976d2;
+  background-color: #eef2fb;
+  color: #1F3A5F;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9375rem;
   font-weight: 500;
-  border: 1px solid #bbdefb;
+  border: 1px solid #d0d9f0;
 }
 
 /* Responsive */
