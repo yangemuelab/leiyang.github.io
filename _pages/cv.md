@@ -54,22 +54,12 @@ redirect_from:
   transform: scale(1.1);
 }
 
-.cv-section-icon--education {
-  color: #E84545;
-  background-color: #fde8e8;
-  border: 2px solid #E84545;
-}
-
-.cv-section-icon--work {
-  color: #903749;
-  background-color: #f5e8ea;
-  border: 2px solid #903749;
-}
-
+.cv-section-icon--education,
+.cv-section-icon--work,
 .cv-section-icon--research {
-  color: #53354A;
-  background-color: #f5f3f4;
-  border: 2px solid #53354A;
+  color: #2B2E4A;
+  background-color: #ebeef6;
+  border: 2px solid #2B2E4A;
 }
 
 .cv-section-content {
@@ -78,12 +68,9 @@ redirect_from:
   margin-bottom: 2.5rem;
 }
 
-.cv-section-content--education {
-  border-left: 4px solid #E84545;
-}
-
+.cv-section-content--education,
 .cv-section-content--work {
-  border-left: 4px solid #903749;
+  border-left: 4px solid #2B2E4A;
 }
 
 .cv-item {
@@ -128,11 +115,11 @@ redirect_from:
 }
 
 .cv-interest-tag {
-  background-color: #f5f3f4;
-  color: #53354A;
+  background-color: #f3f4f6;
+  color: #2B2E4A;
   padding: 0.625rem 1.25rem;
   border-radius: 30px;
-  border: 1px solid #d4d0d2;
+  border: 1px solid #d5d8e2;
   font-size: 1em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   font-weight: 500;
