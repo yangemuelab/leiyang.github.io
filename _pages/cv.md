@@ -22,11 +22,11 @@ redirect_from:
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
-  background-color: #2B2E4A !important;
+  background-color: #3D0000 !important;
 }
 
 .cv-download-btn:hover {
-  background-color: #3a3f5f !important;
+  background-color: #240000 !important;
 }
 
 .cv-section-title {
@@ -57,9 +57,9 @@ redirect_from:
 .cv-section-icon--education,
 .cv-section-icon--work,
 .cv-section-icon--research {
-  color: #2B2E4A;
-  background-color: #ebeef6;
-  border: 2px solid #2B2E4A;
+  color: #3D0000;
+  background-color: #F7EDED;
+  border: 2px solid #3D0000;
 }
 
 .cv-section-content {
@@ -70,7 +70,7 @@ redirect_from:
 
 .cv-section-content--education,
 .cv-section-content--work {
-  border-left: 4px solid #2B2E4A;
+  border-left: 4px solid #3D0000;
 }
 
 .cv-item {
@@ -115,11 +115,11 @@ redirect_from:
 }
 
 .cv-interest-tag {
-  background-color: #f3f4f6;
-  color: #2B2E4A;
+  background-color: #F7EDED;
+  color: #3D0000;
   padding: 0.625rem 1.25rem;
   border-radius: 30px;
-  border: 1px solid #d5d8e2;
+  border: 1px solid #e5c9c9;
   font-size: 1em;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   font-weight: 500;
