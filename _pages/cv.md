@@ -22,6 +22,11 @@ redirect_from:
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   font-size: 0.875rem;
   padding: 0.625rem 1.25rem;
+  background-color: #540863 !important;
+}
+
+.cv-download-btn:hover {
+  background-color: #6a0a7a !important;
 }
 
 .cv-section-title {
@@ -50,21 +55,21 @@ redirect_from:
 }
 
 .cv-section-icon--education {
-  color: #3498db;
-  background-color: #e8f4f8;
-  border: 2px solid #3498db;
+  color: #92487A;
+  background-color: #f5eef3;
+  border: 2px solid #92487A;
 }
 
 .cv-section-icon--work {
-  color: #e67e22;
-  background-color: #fef3e7;
-  border: 2px solid #e67e22;
+  color: #E49BA6;
+  background-color: #fdf2f3;
+  border: 2px solid #E49BA6;
 }
 
 .cv-section-icon--research {
-  color: #27ae60;
-  background-color: #e8f8f0;
-  border: 2px solid #27ae60;
+  color: #E49BA6;
+  background-color: #fff8f8;
+  border: 2px solid #FFD3D5;
 }
 
 .cv-section-content {
@@ -74,11 +79,11 @@ redirect_from:
 }
 
 .cv-section-content--education {
-  border-left: 4px solid #3498db;
+  border-left: 4px solid #92487A;
 }
 
 .cv-section-content--work {
-  border-left: 4px solid #e67e22;
+  border-left: 4px solid #E49BA6;
 }
 
 .cv-item {
