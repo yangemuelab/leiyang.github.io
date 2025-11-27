@@ -25,18 +25,28 @@ redirect_from:
 }
 
 .cv-download-btn {
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  /* CHANGED TO TEAL */
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff !important;
   background-color: var(--brand-teal) !important;
-  color: #ffffff !important; /* Ensure text is white */
+  box-shadow: 0 2px 4px rgba(0, 191, 165, 0.2);
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .cv-download-btn:hover {
-  /* CHANGED TO DARKER TEAL HOVER */
   background-color: var(--brand-teal-dark) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 191, 165, 0.3);
+  text-decoration: none !important;
 }
 
 .cv-section-title {
