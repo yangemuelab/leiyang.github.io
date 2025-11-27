@@ -6,7 +6,14 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}{% if link.url contains 'http' %}{% assign domain = '' %}{% else %}{% assign domain = base_path %}{% endif %}<li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
@@ -14,16 +21,115 @@
   </div>
 </div>
 <style>
-:root{--hbg:#54278f;--htxt:#fff;--ntxt:#111827;--nhov:#54278f}
-.masthead--accent{background:var(--hbg)!important}
-.masthead__inner-wrap,.masthead__menu,.greedy-nav,.greedy-nav button,.masthead__menu--boxed .visible-links,.visible-links,.masthead__menu-item{background:transparent!important}
-.greedy-nav button .navicon,.greedy-nav button .navicon::before,.greedy-nav button .navicon::after,.greedy-nav button.close .navicon,.greedy-nav button.close .navicon::before,.greedy-nav button.close .navicon::after{background-color:var(--htxt)!important;transform:none!important}
-.greedy-nav button .navicon::before,.greedy-nav button.close .navicon::before{top:-8px!important}
-.greedy-nav button .navicon::after,.greedy-nav button.close .navicon::after{top:8px!important}
-.masthead__menu--boxed .visible-links{display:flex;align-items:center;gap:1.5rem;width:100%}
-.masthead__menu-item--lg{font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--htxt);margin-right:auto}
-.masthead__menu-item--lg a,.masthead__menu-item--lg a:link,.masthead__menu-item--lg a:visited,.masthead__menu-item--lg a:hover,.masthead__menu-item--lg a:active,.masthead__menu-item--lg a:focus{font-size:1.4rem;color:#fff!important;text-decoration:none}
-.masthead__menu--boxed a,.greedy-nav .hidden-links a{color:var(--ntxt);text-decoration:none;font-weight:400;letter-spacing:.08em;font-size:1.2rem;text-transform:uppercase}
-.masthead__menu--boxed a:hover,.greedy-nav .hidden-links a:hover{color:var(--nhov)!important}
+:root {
+  --hbg: #54278f;
+  --htxt: #fff;
+  --ntxt: #111827;
+  --nhov: #54278f;
+}
+
+.masthead--accent {
+  background: var(--hbg) !important;
+}
+
+.masthead__inner-wrap,
+.masthead__menu,
+.greedy-nav,
+.greedy-nav button,
+.masthead__menu--boxed .visible-links,
+.visible-links,
+.masthead__menu-item {
+  background: transparent !important;
+}
+
+.greedy-nav {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.greedy-nav button {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 0 !important;
+  height: 2.5rem !important;
+}
+
+.greedy-nav button .navicon,
+.greedy-nav button .navicon::before,
+.greedy-nav button .navicon::after,
+.greedy-nav button.close .navicon,
+.greedy-nav button.close .navicon::before,
+.greedy-nav button.close .navicon::after {
+  background-color: var(--htxt) !important;
+  transform: none !important;
+}
+
+.greedy-nav button .navicon::before,
+.greedy-nav button.close .navicon::before {
+  top: -8px !important;
+}
+
+.greedy-nav button .navicon::after,
+.greedy-nav button.close .navicon::after {
+  top: 8px !important;
+}
+
+.masthead__menu--boxed .visible-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.masthead__menu-item--lg {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--htxt);
+  margin-right: auto;
+}
+
+.masthead__menu-item--lg a,
+.masthead__menu-item--lg a:link,
+.masthead__menu-item--lg a:visited,
+.masthead__menu-item--lg a:active,
+.masthead__menu-item--lg a:focus {
+  font-size: 1.4rem;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.masthead__menu-item--lg a:hover {
+  font-size: 1.4rem;
+  color: #fff !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  background: transparent !important;
+}
+
+.masthead__menu--boxed a,
+.greedy-nav .hidden-links a {
+  color: var(--ntxt);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.masthead__menu--boxed a:hover,
+.greedy-nav .hidden-links a:hover {
+  color: var(--nhov) !important;
+}
 </style>
-<script>$(document).on('click','#site-nav .hidden-links a',function(){$('#site-nav button').removeClass('close');$('#site-nav .hidden-links').addClass('hidden')})</script>
+
+<script>
+$(document).on('click', '#site-nav .hidden-links a', function() {
+  $('#site-nav button').removeClass('close');
+  $('#site-nav .hidden-links').addClass('hidden');
+});
+</script>
