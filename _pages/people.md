@@ -218,13 +218,13 @@ author_profile: false
 }
 
 .person-email a {
-  color: #1F3A5F;
+  color: #00BFA5;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .person-email a:hover {
-  color: #54278f;
+  color: #008c7a;
   text-decoration: underline;
 }
 
