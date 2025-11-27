@@ -176,6 +176,8 @@ redirect_from:
     letter-spacing: 0.05em;
     
     border-radius: 4px; /* Slight rounding */
+
+    text-decoration: none !important;
     
     /* Subtle resting shadow for depth */
     box-shadow: 0 2px 4px rgba(0, 191, 165, 0.2);
@@ -187,6 +189,7 @@ redirect_from:
 .btn--teal::after {
     content: "→"; /* Arrow character */
     font-size: 1.1em;
+    text-decoration: none !important;
     transition: transform 0.3s ease; /* Animate the arrow movement */
 }
 
@@ -197,6 +200,7 @@ redirect_from:
     transform: translateY(-3px);
     /* Increase shadow for "pop" effect */
     box-shadow: 0 8px 16px rgba(0, 191, 165, 0.3);
+    text-decoration: none !important;
 }
 
 /* Move the arrow to the right on hover */
