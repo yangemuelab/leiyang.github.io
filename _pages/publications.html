@@ -199,13 +199,15 @@ author_profile: false
     border-top: 1px solid #e5e7eb;
   }
   
-  .pub-link {
+  .pub-link,
+  .pub-link:link,
+  .pub-link:visited {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     /* CHANGED text color to Teal */
     color: var(--brand-teal);
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 0.875rem;
     font-weight: 500;
     padding: 0.375rem 0.75rem;
@@ -215,11 +217,12 @@ author_profile: false
     transition: all 0.2s ease;
   }
   
-  .pub-link:hover {
+  .pub-link:hover,
+  .pub-link:focus {
     color: #fff;
     /* CHANGED hover background to solid Teal */
     background-color: var(--brand-teal);
-    text-decoration: none;
+    text-decoration: none !important;
     transform: translateY(-1px);
     /* CHANGED shadow color to Teal */
     box-shadow: 0 2px 4px rgba(0, 191, 165, 0.25);
