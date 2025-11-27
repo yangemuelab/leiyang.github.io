@@ -172,6 +172,13 @@ author_profile: false
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.16);
+  border-color: #d5dbee;
 }
 
 .person-photo {
