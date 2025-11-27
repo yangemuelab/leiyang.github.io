@@ -9,11 +9,21 @@ author_profile: false
 
 <style>
 /* Opportunities Page Styles */
+
+/* Define your brand colors for consistency */
+:root {
+    --brand-purple: #54278f;
+    --brand-teal: #00BFA5;
+    --brand-teal-dark: #008c7a;
+    --brand-teal-pale: #E0F7FA; /* A very light wash for backgrounds */
+}
+
+/* Intro box stays Purple to match main brand identity */
 .opportunities-intro {
   margin-bottom: 2rem;
   padding: 1.25rem;
-  background-color: #f4effc;
-  border-left: 4px solid #54278f;
+  background-color: #f4effc; /* Pale purple background */
+  border-left: 4px solid var(--brand-purple);
   border-radius: 4px;
   color: #4b5563;
   font-size: 1.0625rem;
@@ -48,9 +58,12 @@ author_profile: false
   margin-bottom: 0;
 }
 
+/* Highlight box changed to Teal theme */
 .opportunities-highlight {
-  background-color: #eef2fb;
-  border-left: 4px solid #1F3A5F;
+  /* CHANGED background to pale teal wash */
+  background-color: var(--brand-teal-pale);
+  /* CHANGED border to bright teal */
+  border-left: 4px solid var(--brand-teal);
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
   border-radius: 4px;
@@ -107,6 +120,8 @@ author_profile: false
 .opportunities-image-caption-text strong {
   font-weight: 600;
   color: #2c3e50;
+/* Optional: make the "email us" text teal to make it actionable */
+/* color: var(--brand-teal); */
 }
 
 .opportunities-list {
@@ -133,7 +148,8 @@ author_profile: false
   content: "▸";
   position: absolute;
   left: 0;
-  color: #1F3A5F;
+  /* CHANGED bullet color to Teal */
+  color: var(--brand-teal);
   font-weight: bold;
   font-size: 1.125rem;
 }
@@ -145,14 +161,18 @@ author_profile: false
   margin: 1.25rem 0;
 }
 
+/* Tags changed to Teal theme */
 .opportunities-tag {
-  background-color: #eef2fb;
-  color: #1F3A5F;
+  /* CHANGED background to pale teal wash */
+  background-color: var(--brand-teal-pale);
+  /* CHANGED text color to darker teal for readability */
+  color: var(--brand-teal-dark);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9375rem;
   font-weight: 500;
-  border: 1px solid #d0d9f0;
+  /* CHANGED border to bright teal */
+  border: 1px solid var(--brand-teal);
 }
 
 /* Responsive */
