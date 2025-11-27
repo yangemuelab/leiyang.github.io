@@ -153,22 +153,55 @@ redirect_from:
   font-size: 1.05rem;
 }
 
+/* NEW REDESIGNED BUTTON CODE */
 /* Custom Teal Button for CTA */
 .btn--teal {
+    /* Use flexbox to align text and the arrow icon */
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and arrow */
+    
     background-color: var(--brand-teal) !important;
-    border-color: var(--brand-teal) !important;
-    color: #fff !important;
+    border: none !important; /* Remove standard border */
+    color: #ffffff !important;
+    
+    /* Standard professional padding */
     padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: all 0.2s ease;
+    
+    font-weight: 700; /* Bolder text */
+    font-size: 0.95rem;
+    
+    /* Typography settings for a modern look */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    border-radius: 4px; /* Slight rounding */
+    
+    /* Subtle resting shadow for depth */
+    box-shadow: 0 2px 4px rgba(0, 191, 165, 0.2);
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
 }
 
+/* Create the arrow using CSS so we don't clutter HTML */
+.btn--teal::after {
+    content: "→"; /* Arrow character */
+    font-size: 1.1em;
+    transition: transform 0.3s ease; /* Animate the arrow movement */
+}
+
+/* Hover State */
 .btn--teal:hover {
     background-color: var(--brand-teal-dark) !important;
-    border-color: var(--brand-teal-dark) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 191, 165, 0.2);
+    /* Lift button up */
+    transform: translateY(-3px);
+    /* Increase shadow for "pop" effect */
+    box-shadow: 0 8px 16px rgba(0, 191, 165, 0.3);
+}
+
+/* Move the arrow to the right on hover */
+.btn--teal:hover::after {
+    transform: translateX(4px);
 }
 
 
