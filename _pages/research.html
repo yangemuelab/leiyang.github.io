@@ -247,12 +247,11 @@ author_profile: false
 }
 
 /* 💡 COLLAPSIBLE TOGGLE LINK */
-.read-more-link,
-.read-more-link:link,
-.read-more-link:visited {
+.read-more-link {
     display: block;
     width: fit-content;
-    color: var(--brand-teal);
+    /* FIX: Ensure link is styled as teal regardless of link state */
+    color: var(--brand-teal) !important; 
     font-weight: 600;
     text-decoration: none;
     margin-top: 1.5rem;
@@ -264,20 +263,20 @@ author_profile: false
 
 /* 💡 NEW FANCY SYMBOL STYLING */
 .read-more-link::after { 
-    content: "\25BD"; /* Filled Downward Triangle (▼) */
+    content: " \25BD"; /* Filled Downward Triangle (▼) */
     font-size: 0.9em;
     margin-left: 0.25em;
     display: inline-block;
-    transition: content 0.3s ease; /* Transition for visual consistency */
+    transition: transform 0.3s ease;
 }
 
 .read-more-link.active::after { 
-    content: "\25B3"; /* Filled Upward Triangle (▲) */
+    content: " \25B3"; /* Filled Upward Triangle (▲) */
 }
 
 .read-more-link:hover {
     color: var(--brand-teal-dark);
-    text-decoration: none;
+    text-decoration: underline; /* Added underline back on hover for clear feedback */
 }
 
 /* --- COLLAPSIBLE PUBLICATION SECTION --- */
@@ -372,27 +371,25 @@ author_profile: false
 document.addEventListener('DOMContentLoaded', function() {
   const toggleLinks = document.querySelectorAll('.toggle-link');
 
+  // Fix 1: Ensure publications are fully hidden on load (in case of cached state)
+  // This is already handled by the CSS max-height: 0, but is good practice here.
+  
   toggleLinks.forEach(link => {
-    // 1. Initially hide all publications content on page load for graceful transition
-    const targetId = link.getAttribute('data-target');
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-        targetElement.classList.remove('expanded');
-    }
-
+    // Initial content hiding is primarily handled by the CSS rule: .publications-collapsible { max-height: 0; }
+    
     link.addEventListener('click', function(e) {
       e.preventDefault();
 
       const targetElement = document.querySelector(this.getAttribute('data-target'));
 
       if (targetElement) {
-        // 2. Toggle the 'expanded' class on the target content
+        // 1. Toggle the 'expanded' class on the target content
         targetElement.classList.toggle('expanded');
         
-        // 3. Toggle the 'active' class on the link (triggers CSS symbol change)
+        // 2. Toggle the 'active' class on the link (triggers CSS symbol change)
         this.classList.toggle('active'); 
         
-        // 4. Toggle the link text
+        // 3. Toggle the link text
         if (targetElement.classList.contains('expanded')) {
           this.innerHTML = "Hide Relevant Publications"; 
         } else {
