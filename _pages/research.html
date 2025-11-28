@@ -250,15 +250,20 @@ author_profile: false
 .read-more-link {
     display: block;
     width: fit-content;
-    /* FIX: Ensure link is styled as teal regardless of link state */
-    color: var(--brand-teal) !important; 
+    color: var(--brand-teal) !important; /* FIX: Force Teal color */
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: none !important; /* FIX: Force no underline */
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-light);
     transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.read-more-link:hover {
+    color: var(--brand-teal-dark) !important; /* FIX: Ensure hover color applies */
+    text-decoration: none !important; /* FIX: Ensure no underline on hover */
 }
 
 /* 💡 NEW FANCY SYMBOL STYLING */
@@ -274,11 +279,6 @@ author_profile: false
     content: " \25B3"; /* Filled Upward Triangle (▲) */
 }
 
-.read-more-link:hover {
-    color: var(--brand-teal-dark);
-    text-decoration: underline; /* Added underline back on hover for clear feedback */
-}
-
 /* --- COLLAPSIBLE PUBLICATION SECTION --- */
 .project-pubs {
     padding: 0 1rem;
@@ -289,12 +289,13 @@ author_profile: false
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    /* FIX: Transition on max-height needs to be longer for smooth expansion */
+    transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out, margin-top 0.4s ease-in-out;
 }
 
 /* 💡 EXPANDED STATE (JS adds this class) */
 .publications-collapsible.expanded {
-    max-height: 1000px;
+    max-height: 1000px; /* Needs to be larger than content height */
     opacity: 1;
     margin-top: 1rem;
 }
@@ -371,12 +372,10 @@ author_profile: false
 document.addEventListener('DOMContentLoaded', function() {
   const toggleLinks = document.querySelectorAll('.toggle-link');
 
-  // Fix 1: Ensure publications are fully hidden on load (in case of cached state)
-  // This is already handled by the CSS max-height: 0, but is good practice here.
-  
   toggleLinks.forEach(link => {
-    // Initial content hiding is primarily handled by the CSS rule: .publications-collapsible { max-height: 0; }
-    
+    // Initial state setup (hiding content via CSS max-height: 0)
+    // No JS needed to hide initially, just good to know the CSS handles it.
+
     link.addEventListener('click', function(e) {
       e.preventDefault();
 
