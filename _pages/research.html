@@ -11,8 +11,276 @@ author_profile: false
   We integrate experiments, theory, computational modeling, AI and AM to understand extreme events and extreme conditions. Below are our key research areas.
 </p>
 
+{% comment %}
 <div class="grid__wrapper">
   {% for post in site.research %}
     {% include archive-single.html type="grid" %}
   {% endfor %}
 </div>
+{% endcomment %}
+
+<section class="research-section" id="project-one">
+  <h2>Project 1: Extreme Mechanics for Underground Engineering</h2>
+  <div class="project-card">
+    <div class="project-flex-container">
+      
+      <div class="project-figure">
+        <img src="{{ '/images/project-1-figure.jpg' | relative_url }}" alt="Figure illustrating Project 1" loading="lazy">
+      </div>
+      
+      <div class="project-intro">
+        <p>This research aims to understand the non-linear behavior of geomaterials under high-stress conditions typically found in deep underground environments. We utilize advanced computational methods (e.g., FEM, DEM) coupled with novel experimental techniques.</p>
+        <ul>
+            <li>**Key Goal:** Develop constitutive models for large-scale geotechnical systems.</li>
+            <li>**Method:** Integrating Machine Learning with classic mechanics principles.</li>
+            <li>**Sponsor:** National Science Foundation (NSF).</li>
+        </ul>
+        <a href="#pubs-project-one" class="read-more-link">See Relevant Publications ↓</a>
+      </div>
+
+    </div>
+    
+    <div class="project-pubs" id="pubs-project-one">
+      <h3>Relevant Publications</h3>
+      {% assign relevant_pubs = site.data.publications | where: "project", "project-one" | limit: 3 %}
+      {% if relevant_pubs.size > 0 %}
+        <ul class="pub-list-mini">
+          {% for pub in relevant_pubs %}
+            <li>
+              <span class="pub-title-mini">**{{ pub.title }}**</span>
+              <span class="pub-detail">({{ pub.journal | default: pub.year }})</span>
+              
+              {% if pub.journal_url %}
+              <a href="{{ pub.journal_url }}" target="_blank" class="mini-link" title="Journal/DOI Link">
+                [DOI]
+              </a>
+              {% endif %}
+              
+              {% if pub.scholar_url %}
+              <a href="{{ pub.scholar_url }}" target="_blank" class="mini-link" title="Google Scholar">
+                [Scholar]
+              </a>
+              {% endif %}
+
+              {% if pub.pdf %}
+              <a href="{{ pub.pdf | relative_url }}" target="_blank" class="mini-link" title="Download PDF">
+                [PDF]
+              </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Relevant publications for this project are forthcoming.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="research-section" id="project-two">
+  <h2>Project 2: AI-Driven Composite Design</h2>
+  <div class="project-card">
+    <div class="project-flex-container">
+      <div class="project-figure">
+        <img src="{{ '/images/project-2-figure.jpg' | relative_url }}" alt="Figure illustrating Project 2" loading="lazy">
+      </div>
+      <div class="project-intro">
+        <p>This project explores the use of generative adversarial networks (GANs) and reinforcement learning to autonomously design new composite materials with optimized mechanical properties...</p>
+        <a href="#pubs-project-two" class="read-more-link">See Relevant Publications ↓</a>
+      </div>
+    </div>
+    <div class="project-pubs" id="pubs-project-two">
+      <h3>Relevant Publications</h3>
+      {% assign relevant_pubs = site.data.publications | where: "project", "project-two" | limit: 3 %}
+      <p>Relevant publications for this project are forthcoming.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* --- RESEARCH PAGE STYLES --- */
+
+/* Define Color Variables for consistency */
+:root {
+    --brand-teal: #00BFA5;
+    --brand-teal-dark: #008c7a;
+    --heading-dark: #2c3e50;
+    --text-dark: #1a202c;
+    --text-medium: #4a4a4a;
+    --border-light: #e5e7eb;
+    --card-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+/* --- Section Headings (MATCHES PEOPLE PAGE) --- */
+.research-section h2 {
+    font-size: 1.375rem; 
+    font-weight: 600;
+    color: var(--heading-dark); 
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.research-section:first-of-type h2 {
+  margin-top: 0;
+}
+
+/* --- Project Card (The Main Container) --- */
+.project-card {
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+/* --- Flexible Layout (Figure Left, Intro Right) --- */
+.project-flex-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Project Figure (Left) */
+.project-figure {
+    flex: 0 0 35%; 
+    max-width: 350px;
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.project-figure:hover img {
+    /* 1. Lift */
+    transform: translateY(-5px); 
+    
+    /* 2. Soft, Diffuse Shadow */
+    /* Using a distinct, pronounced shadow for the large figure */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2), 
+                0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Project Introduction (Right) */
+.project-intro {
+    flex: 1;
+}
+
+.project-intro p,
+.project-intro ul {
+    font-size: 1rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-top: 0;
+}
+
+.project-intro ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    padding-left: 0;
+}
+
+.project-intro li {
+    margin-bottom: 0.5em;
+}
+
+.read-more-link {
+    display: inline-block;
+    color: var(--brand-teal);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: color 0.2s ease;
+}
+
+.read-more-link:hover {
+    color: var(--brand-teal-dark);
+    text-decoration: underline;
+}
+
+/* --- Relevant Publications (Bottom) --- */
+.project-pubs h3 {
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.pub-list-mini {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-list-mini li {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.pub-list-mini .pub-title-mini {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.pub-list-mini .pub-detail {
+    font-style: italic;
+    margin-left: 0.5em;
+    color: #888;
+}
+
+/* Style for the [DOI], [Scholar], [PDF] links */
+.pub-list-mini .mini-link {
+    display: inline-block;
+    color: var(--brand-teal);
+    font-size: 0.85rem; 
+    margin-left: 0.75em;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 0.2em;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.pub-list-mini .mini-link:hover {
+    color: #fff;
+    background-color: var(--brand-teal);
+    border-color: var(--brand-teal);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 850px) {
+    .project-flex-container {
+        flex-direction: column; 
+        gap: 1.5rem;
+        border-bottom: none; /* Remove border when stacked */
+        padding-bottom: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-figure {
+        flex: 0 0 auto;
+        max-width: 100%;
+        order: -1; /* Place figure above text on mobile */
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+
+    .research-section h2 {
+        font-size: 1.25rem;
+    }
+}
+</style>
