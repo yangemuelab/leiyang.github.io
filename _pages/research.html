@@ -37,15 +37,9 @@ author_profile: false
         the impact crater diameter and ejecta angle as a function of time. Our experimental results
         are useful for planetary science and defense communities to benchmark hydrocodes and validate constitutive models.
       </p>
-
-      <a role="button" 
-         class="read-more-link toggle-link" 
-         data-target="#project-one-pubs-content">
-        See Relevant Publications
-      </a>
     </div>
-
-    <div class="project-pubs publications-collapsible" id="project-one-pubs-content">
+    
+    <div class="project-pubs publications-list--permanent" id="pubs-project-one">
       <h3>Relevant Publications</h3>
       {% assign relevant_pubs = site.data.publications | where: "project", "project-one" | limit: 3 %}
       {% if relevant_pubs.size > 0 %}
@@ -103,15 +97,10 @@ author_profile: false
           <li><strong>Method:</strong> Generative Adversarial Networks (GANs).</li>
       </ul>
       
-      <a role="button" 
-         class="read-more-link toggle-link" 
-         data-target="#project-two-pubs-content">
-        See Relevant Publications
-      </a>
       
     </div>
     
-    <div class="project-pubs publications-collapsible" id="project-two-pubs-content">
+    <div class="project-pubs publications-list--permanent" id="pubs-project-two">
       <h3>Relevant Publications</h3>
       {% assign relevant_pubs = site.data.publications | where: "project", "project-two" | limit: 3 %}
       {% if relevant_pubs.size > 0 %}
@@ -179,17 +168,19 @@ author_profile: false
 
 /* --- Project Card (The Main Container) --- */
 .project-card {
+    /* Base Layout */
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.25rem;
     background-color: #fff;
     margin-bottom: 2.5rem;
     box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08); 
+    
+    /* Transition and Layout */
     transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-    display: grid;
-    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 1.75rem;
-    align-items: stretch;
 }
 
 /* 💡 ACADEMIC HOVER EFFECT (Clean Lift + White/Gray Glow) */
@@ -213,10 +204,12 @@ author_profile: false
     position: relative;
     border-radius: 10px; 
     overflow: hidden;
-    height: 100%;
+    width: 100%;
+    max-height: 420px;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
 }
 
+/* Added styles for hover visual feedback on video/figure */
 .project-figure--full::after {
     content: "";
     position: absolute;
@@ -251,12 +244,14 @@ author_profile: false
 .project-figure--full img,
 .project-figure--full video { 
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
     user-select: none;
     -webkit-user-drag: none;
     pointer-events: none;
+    
+    /* CRITICAL: Must be set to 'none' since the parent card handles the transition */
+    transition: none; 
 }
 
 .project-content {
@@ -269,6 +264,11 @@ author_profile: false
 .project-intro--below {
     padding: 0; 
     margin-bottom: 0; 
+    
+    /* 🌟 PERMANENT SEPARATOR 🌟 */
+    border-bottom: 2px solid var(--border-light); 
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .project-intro--below p {
@@ -325,61 +325,14 @@ author_profile: false
     font-weight: 700;
 }
 
-/* 💡 COLLAPSIBLE TOGGLE LINK */
-.read-more-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    color: var(--brand-teal) !important;
-    font-weight: 600;
-    text-decoration: none !important;
-    margin-top: 0.5rem;
-    border: 1px solid rgba(0,191,165,0.35);
-    border-radius: 999px;
-    padding: 0.45rem 0.95rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    background-color: rgba(0,191,165,0.08);
-}
-
-.read-more-link:hover {
-    color: #fff !important;
-    text-decoration: none !important;
-    background-color: var(--brand-teal);
-    border-color: var(--brand-teal);
-}
-
-.read-more-link::after { 
-    content: "\25BC";
-    font-size: 0.85em;
-    transition: transform 0.3s ease;
-}
-
-.read-more-link.active::after { 
-    transform: rotate(180deg);
-}
-
-/* --- COLLAPSIBLE PUBLICATION SECTION --- */
+/* --- Relevant Publications (Bottom - Permanent) --- */
 .project-pubs {
-    padding: 1rem 0 0 0;
-    border-top: 1px solid var(--border-light);
-    margin-top: 0.5rem;
+    padding: 0;
 }
 
-/* 💡 HIDES CONTENT BY DEFAULT */
-.publications-collapsible {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    /* FIX: Transition on max-height needs to be longer for smooth expansion */
-    transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out, margin-top 0.4s ease-in-out;
-}
-
-/* 💡 EXPANDED STATE (JS adds this class) */
-.publications-collapsible.expanded {
-    max-height: 1000px; /* Needs to be larger than content height */
-    opacity: 1;
-    margin-top: 1rem;
+.publications-list--permanent {
+    padding: 0; 
+    margin: 0;
 }
 
 .project-pubs h3 {
@@ -437,59 +390,31 @@ author_profile: false
 }
 
 /* --- Responsive Adjustments --- */
+@media (min-width: 1200px) {
+    .project-card {
+        display: grid;
+        grid-template-columns: minmax(340px, 1.1fr) minmax(320px, 0.9fr);
+        align-items: stretch;
+    }
+    .project-figure--full {
+        height: auto;
+    }
+}
+
 @media (max-width: 850px) {
     .research-section h2 {
         font-size: 1.25rem;
     }
     .project-card {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 1.25rem;
-    }
-    .project-figure--full {
-        height: 240px;
+        padding: 0.5rem 0.25rem 1rem 0.25rem;
+        gap: 1rem;
     }
     .project-intro--below, .project-pubs {
-        padding: 0;
+        padding: 0; /* Remove horizontal padding added in desktop view */
+        margin-bottom: 1rem;
+    }
+    .project-figure--full {
+        max-height: 300px;
     }
 }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toggleLinks = document.querySelectorAll('.toggle-link');
-  
-    toggleLinks.forEach(link => {
-      
-      // Initial state setup: Ensure content is hidden on page load
-      const targetId = link.getAttribute('data-target');
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-          // This line ensures the content is hidden when the script loads,
-          // relying on the CSS: .publications-collapsible { max-height: 0; }
-          targetElement.classList.remove('expanded');
-      }
-  
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-  
-        const targetElement = document.querySelector(this.getAttribute('data-target'));
-  
-        if (targetElement) {
-          // 1. Toggle the 'expanded' class (makes content visible via CSS)
-          targetElement.classList.toggle('expanded');
-          
-          // 2. Toggle the 'active' class (triggers the CSS symbol change)
-          this.classList.toggle('active'); 
-          
-          // 3. Toggle the link text
-          if (targetElement.classList.contains('expanded')) {
-            this.innerHTML = "Hide Relevant Publications"; 
-          } else {
-            this.innerHTML = "See Relevant Publications"; 
-          }
-        }
-      });
-    });
-  });
-  </script>
