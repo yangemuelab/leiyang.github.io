@@ -139,6 +139,70 @@ author_profile: false
     </div>
   </div>
 </section>
+
+<section class="research-section" id="project-three">
+  <h2>Project 3: Phenomenological Constitutive Model for Rocks</h2>
+  <div class="project-card">
+    <div class="project-figure--full">
+        <img src="{{ '/research/PhenomenologicalRock.jpg' | relative_url }}" alt="Figure illustrating Project 3" loading="lazy">
+    </div>
+
+    <div class="project-content">
+    <div class="project-intro--below">
+      <div class="project-meta-chips">
+        <span>Damage</span>
+        <span>Plasticity</span>
+        <span>Pressure-dependent</span>
+        <span>Rate-dependent</span>
+      </div>
+      <p>This work proposes a phenomenological constitutive model for rocks subjected to dynamic loading. The model
+        considers the effects of confining pressure and strain rate on the strength and strain softening behaviors of rock. 
+        It also treats the tensile and compressive damages, both related deviatoric and volumetric deformations. 
+        Fractionally-associated flow rule and lode-angle dependency are employed to capture the shear dilation behaviour of rock. 
+        The model can simulate the behavior of rock under various dynamic loading scenarios, including Kolsky bar, projectile impact, and blast.
+        Compared with the commonly used phenomenological models in commerical software, 
+        our model requires lesser parameters and has higher comuptation efficiency.
+      </p>
+      
+    </div>
+    </div>
+
+    <div class="project-pubs publications-list--permanent" id="pubs-project-three">
+      <h3>Relevant Publications</h3>
+      {% assign relevant_pubs = site.data.publications | where: "project", "project-three" | limit: 3 %}
+      {% if relevant_pubs.size > 0 %}
+        <ul class="pub-list-mini">
+          {% for pub in relevant_pubs %}
+            <li>
+              <span class="pub-title-mini"><strong>{{ pub.title }}</strong></span>
+              <span class="pub-detail">({{ pub.journal | default: pub.year }})</span>
+              
+              {% if pub.journal_url %}
+              <a href="{{ pub.journal_url }}" target="_blank" class="mini-link" title="Journal/DOI Link">
+                [DOI]
+              </a>
+              {% endif %}
+              
+              {% if pub.scholar_url %}
+              <a href="{{ pub.scholar_url }}" target="_blank" class="mini-link" title="Google Scholar">
+                [Scholar]
+              </a>
+              {% endif %}
+
+              {% if pub.pdf %}
+              <a href="{{ pub.pdf | relative_url }}" target="_blank" class="mini-link" title="Download PDF">
+                [PDF]
+              </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Relevant publications for this project are forthcoming.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
 <style>
 /* --- RESEARCH PAGE STYLES --- */
 
