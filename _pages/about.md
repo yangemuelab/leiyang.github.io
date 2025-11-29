@@ -91,12 +91,12 @@ redirect_from:
 .home-intro-media img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   border-radius: 4px;
 }
 
 .home-intro-media p {
-  font-size: 0.9em;
+  font-size: 1.0em;
   font-style: italic;
   color: #7f8c8d;
   margin: 0;
