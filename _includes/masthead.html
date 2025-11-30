@@ -29,21 +29,21 @@
     --nhov: #00BFA5;
   }
   
-  /* Hide navigation links until JavaScript initializes to prevent FOUC */
-  .greedy-nav .visible-links {
+  /* Hide navigation links (but not brand name) until JavaScript initializes to prevent FOUC */
+  .greedy-nav .visible-links .masthead__menu-item:not(.persist) {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
   }
   
-  /* Show navigation after JavaScript initializes and navigation is ready */
-  .js .greedy-nav.nav-ready .visible-links {
+  /* Show navigation links after JavaScript initializes and navigation is ready */
+  .js .greedy-nav.nav-ready .visible-links .masthead__menu-item:not(.persist) {
     opacity: 1;
     visibility: visible;
   }
   
   /* Fallback: show navigation if JavaScript is disabled */
-  .no-js .greedy-nav .visible-links {
+  .no-js .greedy-nav .visible-links .masthead__menu-item:not(.persist) {
     opacity: 1;
     visibility: visible;
   }
