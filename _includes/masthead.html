@@ -29,6 +29,25 @@
     --nhov: #00BFA5;
   }
   
+  /* Hide navigation links until JavaScript initializes to prevent FOUC */
+  .greedy-nav .visible-links {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in, visibility 0.2s ease-in;
+  }
+  
+  /* Show navigation after JavaScript initializes and navigation is ready */
+  .js .greedy-nav.nav-ready .visible-links {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Fallback: show navigation if JavaScript is disabled */
+  .no-js .greedy-nav .visible-links {
+    opacity: 1;
+    visibility: visible;
+  }
+  
   .masthead--accent {
     background: var(--hbg) !important;
   }
@@ -157,5 +176,14 @@
 $(document).on('click', '#site-nav .hidden-links a', function() {
   $('#site-nav button').removeClass('close');
   $('#site-nav .hidden-links').addClass('hidden');
+});
+
+// Fallback: show navigation after a short delay if nav-ready class wasn't added
+$(document).ready(function() {
+  setTimeout(function() {
+    if (!$('#site-nav').hasClass('nav-ready')) {
+      $('#site-nav').addClass('nav-ready');
+    }
+  }, 100);
 });
 </script>

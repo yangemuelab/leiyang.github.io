@@ -83,4 +83,6 @@ $btn.on('click', function () {
   $(this).toggleClass('close');
 });
 
+// Initialize navigation and mark as ready
 updateNav();
+$nav.addClass('nav-ready');
