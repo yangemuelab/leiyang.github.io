@@ -209,7 +209,7 @@ author_profile: false
 </style>
 
 <div class="opportunities-intro">
-  Our group is diverse and has broad research interests. We do basic to applied research, which means we focus on the fundamentals, physics and mechanisms which can be applied to real-world applications. In our group, we respect each member's research interests and pride ourselves on being highly supportive of each other.
+  Our group is diverse with broad research interests. We do basic to applied research, focusing on the fundamentals, physics and mechanisms which can be applied to real-world applications. In our group, we respect each member's research interests and pride ourselves on being highly supportive of each other. Our research ethos is to <strong>do things right rather than fast</strong>.
 </div>
 
 <div class="opportunities-image-container">
@@ -247,4 +247,3 @@ author_profile: false
     </p>
   </div>
 </div>
-

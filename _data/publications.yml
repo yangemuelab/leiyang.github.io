@@ -56,6 +56,7 @@
   year: 2022
   journal_url: "https://doi.org/10.1016/j.engstruct.2022.114582"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Experimental+and+numerical+investigations+of+hybrid-fibre+engineered+cementitious+composite+panels+under+contact+explosions&btnG="
+  project: "project-four"
 
 - title: "Simultaneous propagation of hydraulic fractures from multiple perforation clusters in layered tight reservoirs: Non-planar three-dimensional modelling"
   authors: "Lei Yang, Shan Wu, Ke Gao, Luming Shen"
@@ -97,6 +98,7 @@
   year: 2019
   journal_url: "https://doi.org/10.1016/j.compstruct.2019.04.021"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=A+new+constitutive+model+for+steel+fibre+reinforced+concrete+subjected+to+dynamic+loads&btnG="
+  project: "project-four"
 
 - title: "Prediction of dynamic increase factor for steel fibre reinforced concrete using a hybrid artificial intelligence model"
   authors: "Lei Yang, Chongchong Qi, Xiaoshan Lin, Junwei Li, Xiangjian Dong"
@@ -105,6 +107,7 @@
   year: 2019
   journal_url: "https://doi.org/10.1016/j.engstruct.2019.03.105"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Prediction+of+dynamic+increase+factor+for+steel+fibre+reinforced+concrete+using+a+hybrid+artificial+intelligence+model&btnG="
+  project: "project-four"
 
 - title: "Evaluation of dynamic increase factor models for steel fibre reinforced concrete"
   authors: "Lei Yang, Xiaoshan Lin, Rebecca J. Gravina"
@@ -113,6 +116,7 @@
   year: 2018
   journal_url: "https://doi.org/10.1016/j.conbuildmat.2018.09.085"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Evaluation+of+dynamic+increase+factor+models+for+steel+fibre+reinforced+concrete&btnG="
+  project: "project-four"
 
 - title: "Numerical investigation on the fracture mechanism of rock-like Brazilian discs with interbedded hard-soft layers"
   authors: "Lei Yang, Mansour Sharafisafa, Luming Shen"
