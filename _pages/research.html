@@ -275,6 +275,76 @@ author_profile: false
   </div>
 </section>
 
+<section class="research-section" id="project-five">
+  <h2>Project 5: Hydraulic Fracturing Simulation in Hydrocarbon Stimulation</h2>
+  <div class="project-card">
+    
+    <div class="project-figure--full">
+      <figure>
+        <video autoplay loop muted playsinline>
+            <source src="{{ '/research/HydraulicFracturing.mp4' | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Simulated using Elfen TGR</figcaption>
+      </figure>
+    </div>
+    
+    <div class="project-content">
+    <div class="project-intro--below">
+      <div class="project-meta-chips">
+        <span>3D FDEM</span>
+        <span>Hydraulic fracturing</span>
+        <span>Multi-stage and multi-cluster</span>
+        <span>Layered tight reservoirs</span>
+      </div>
+      <p>This project focuses on understanding the simultaneous propagation mechanism of hydraulic fractures in hydrocarbon stimulation.
+        We use a versatile non-planar three-dimensional FDEM method to simulate the propgation of multiple perforation clusters 
+        in a single fracturing stage. In particular, we are interested in the interaction between the hydraulic fractures 
+        propgation and the layering structure of the tight reservoir. 
+        Our research contributes to improving the productivity in stimulating shale/tight gas and shale oil.
+
+        
+      </p>
+    </div>
+    </div>
+
+    <div class="project-pubs publications-list--permanent" id="pubs-project-five">
+      <h3>Relevant Publications</h3>
+      {% assign relevant_pubs = site.data.publications | where: "project", "project-five" | limit: 3 %}
+      {% if relevant_pubs.size > 0 %}
+        <ul class="pub-list-mini">
+          {% for pub in relevant_pubs %}
+            <li>
+              <span class="pub-title-mini"><strong>{{ pub.title }}</strong></span>
+              <span class="pub-detail">({{ pub.journal | default: pub.year }})</span>
+              
+              {% if pub.journal_url %}
+              <a href="{{ pub.journal_url }}" target="_blank" class="mini-link" title="Journal/DOI Link">
+                [DOI]
+              </a>
+              {% endif %}
+              
+              {% if pub.scholar_url %}
+              <a href="{{ pub.scholar_url }}" target="_blank" class="mini-link" title="Google Scholar">
+                [Scholar]
+              </a>
+              {% endif %}
+
+              {% if pub.pdf %}
+              <a href="{{ pub.pdf | relative_url }}" target="_blank" class="mini-link" title="Download PDF">
+                [PDF]
+              </a>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Relevant publications for this project are forthcoming.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
 <style>
 /* --- RESEARCH PAGE STYLES --- */
 

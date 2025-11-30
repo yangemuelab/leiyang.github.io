@@ -40,6 +40,7 @@
   year: 2024
   journal_url: "https://www.sciencedirect.com/science/article/pii/S1674775524000842"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Extended+finite+element-based+cohesive+zone+method+for+modeling+simultaneous+hydraulic+fracture+height+growth+in+layered+reservoirs&btnG="
+  project: "project-five"
 
 - title: "Shack–Hartmann wavefront sensing: A new approach to time-resolved measurement of the stress intensity factor during dynamic fracture"
   authors: "Liuchi Li, Velat Kilic, Milad Alemohammad, Lei Yang, KT Ramesh, Mark A Foster, Todd C Hufnagel"
@@ -65,6 +66,7 @@
   year: 2022
   journal_url: "https://doi.org/10.1016/j.energy.2022.124483"
   scholar_url: "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=Simultaneous+propagation+of+hydraulic+fractures+from+multiple+perforation+clusters+in+layered+tight+reservoirs%3A+Non-planar+three-dimensional+modelling&btnG="
+  project: "project-five"
 
 - title: "On the fracture mechanism of rock-like materials with interbedded hard-soft layers under Brazilian tests"
   authors: "Lei Yang, Mansour Sharafisafa, Luming Shen"
