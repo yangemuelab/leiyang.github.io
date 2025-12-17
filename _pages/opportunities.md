@@ -208,19 +208,9 @@ author_profile: false
 }
 </style>
 
-<div class="opportunities-intro" markdown="1">
+<div class="opportunities-intro">
 
   Our group is diverse and interdisciplinary. We bridge the gap between basic and applied research, focusing on the fundamental physics and mechanisms that drive real-world applications. We respect each member's individual research interests and pride ourselves on a highly supportive culture. Our research ethos is simple: <strong>we do things right rather than fast</strong>.
-
-  To ensure our work has lasting impact, we constantly challenge ourselves with the following questions:
-
-  <ul class="opportunities-list">
-    <li>The Foundations: Who are the "titans" in your area?</li>
-    <li>The Paradox: What is the critical research gap in the current literature?</li>
-    <li>The Barrier: Why is this problem important and has not been done?</li>
-    <li>The Innovation: How will you push the boundary, and why you?</li>
-    <li>The Discovery: What questions will you be able to answer with your results?</li>
-  </ul>
   
 </div>
 
@@ -248,6 +238,19 @@ author_profile: false
     <p>
       Although I am not an experimentalist, candidates with material characterizations (pre-testing, in-situ, and post-mortem) skills are also encouraged to join us. Experiments help us discover mechanisms, calibrate and validate modeling results.
     </p>
+
+    <p>
+      To ensure our work has lasting impact, we look for candidates who enjoy asking the following questions:
+    </p>
+    
+    <ul>
+      <li><strong>The Foundations</strong>: Who are the "titans" in your area?</li>
+      <li><strong>The Paradox</strong>: What is the critical research gap in the current literature?</li>
+      <li><strong>The Barrier</strong>: Why is this problem important and has not been done?</li>
+      <li><strong>The Innovation</strong>: How will you push the boundary, and why you?</li>
+      <li><strong>The Discovery</strong>: What questions will you be able to answer with your results?</li>
+    </ul>
+
   </div>
 </div>
 
